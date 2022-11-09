@@ -7,7 +7,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { ReactSession } from 'react-client-session';
 import Header from "./components/Header";
 
-const END_POINT_ROOT = "http://20.242.114.218:8000/";
+const END_POINT_ROOT = "http://localhost:8000/";
 
 class Day extends React.Component {
 
