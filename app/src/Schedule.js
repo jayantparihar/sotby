@@ -91,7 +91,7 @@ export default class App extends React.Component {
       })
       .catch((error) => {
         console.error('Error:', error);
-        console.log("server is down!!")   
+        console.log(error)   
       });
   }
 
