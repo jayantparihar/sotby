@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Select from 'react-select';
 
-const END_POINT_ROOT = "http://127.0.0.1:8000/"
+const END_POINT_ROOT = "http://localhost:8000/"
 const COURSE_RESOURCE = "courses"
 
 const parseData = (data) => {

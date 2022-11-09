@@ -4,7 +4,7 @@ import './gridstyles.css';
 import "./timeline.css";
 import Timeline from './components/Timeline';
 
-const END_POINT_ROOT = "http://127.0.0.1:8000/";
+const END_POINT_ROOT = "http://localhost:8000/";
 const INSTRUCTORS_RESOURCE = "users";
 
 export default class App extends React.Component {

@@ -25,7 +25,7 @@ export default function Login() {
         body: JSON.stringify(user)
     };
 
-    await fetch('http://127.0.0.1:8000:3000/login', requestOptions)
+    await fetch('http://localhost:8000/:3000/login', requestOptions)
         .then(response => response.json())
         .then(data => res_data = data);
 
