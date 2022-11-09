@@ -10,8 +10,8 @@ require("chromedriver");
 async function main() {
     let driver = await new Builder().forBrowser("chrome").build();
     let driver2 = await new Builder().forBrowser("chrome").build();
-    await driver.get("20.242.114.218:3000/");
-    await driver2.get("20.242.114.218:3001/");
+    await driver.get("http://20.242.114.218:3000/");
+    await driver2.get("http://20.242.114.218:3001/");
 
     const user1 = {fname: "Patrick", lname: "Star", email: "patstar@fake.com", pass: "pass"};
     const user2 = {fname2: "Squidward", lname2: "Tentacles", email2: "squidtenta@fake.com", pass2: "pass"};
