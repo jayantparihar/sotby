@@ -6,7 +6,7 @@ import Timeline from '../Timeline';
 import {useParams} from "react-router-dom";
 //const socket = io.connect('/');
 
-const END_POINT_ROOT = "http://localhost:8000/";
+const END_POINT_ROOT = "http://127.0.0.1:8000/";
 const INSTRUCTORS_RESOURCE = "users";
 
 export default function App({socket}) {
