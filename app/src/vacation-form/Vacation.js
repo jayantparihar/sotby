@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { styled } from "@mui/system";
 import { createTheme } from "@mui/material";
 
-const END_POINT_ROOT = "/.."
+const END_POINT_ROOT = "/"
 const VACATION_RESOURCE = "users"
 
 function isUser() {

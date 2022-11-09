@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Select from 'react-select';
 
-const END_POINT_ROOT = "/.."
+const END_POINT_ROOT = "/"
 const COURSE_RESOURCE = "courses"
 
 const parseData = (data) => {

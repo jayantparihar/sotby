@@ -5,7 +5,7 @@ import _ from "lodash";
 import { useSearchParams } from "react-router-dom";
 import { ReactSession } from 'react-client-session';
 
-const END_POINT_ROOT = "/..";
+const END_POINT_ROOT = "/";
 
 class PopUp extends Component {
 

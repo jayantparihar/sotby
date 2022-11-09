@@ -7,7 +7,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { ReactSession } from 'react-client-session';
 import Header from "./components/Header";
 
-const END_POINT_ROOT = "/..";
+const END_POINT_ROOT = "/";
 
 class Day extends React.Component {
 
