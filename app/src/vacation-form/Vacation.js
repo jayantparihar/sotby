@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { styled } from "@mui/system";
 import { createTheme } from "@mui/material";
 
-const END_POINT_ROOT = "http://127.0.0.1:8000/"
+const END_POINT_ROOT = "http://localhost:8000/:8000/"
 const VACATION_RESOURCE = "users"
 
 function isUser() {
