@@ -96,7 +96,7 @@ export default class LocalStorageLayout extends React.PureComponent {
   // Note: Websockets are used to send a query to update the database
   updateCourse(id, start, end) {
     const body = {start: start, end: end};
-    fetch('http://20.242.114.218:8000/instructors/' + id, {
+    fetch('http://127.0.0.1:8000/instructors/' + id, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
