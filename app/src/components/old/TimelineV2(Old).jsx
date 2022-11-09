@@ -76,7 +76,7 @@ export default function Timeline({socket, heightLimit, instructorArray}) {
     }
 
     const retrieveNamesFromDatabase = () => {
-        fetch('http://localhost:8000/instructors')
+        fetch('http://20.242.114.218:8000/instructors')
         .then(response => {
             return response.text();
         })
