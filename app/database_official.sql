@@ -78,11 +78,7 @@ CREATE TABLE "resource_allocation" (
   OIDS=FALSE
 );
 
-INSERT INTO "user"
-	(username, first_name, last_name, date_joined, admin, email, password)
-	VALUES 
-	('admin_0', 'admin', '0', 
-	to_timestamp(1641081600000 / 1000.0), 1, 'admin@fake.com', 
+INSERT INTO "public.user"	(username, first_name, last_name, date_joined, admin, email, password)VALUES ('admin_0', 'admin', '0', to_timestamp(1641081600000 / 1000.0), 1, 'admin@fake.com', 
 	'$argon2id$v=19$m=4096,t=3,p=1$17QzF4b8gf5+CnhpWkcfXA$aESP8AhjjmYufZ8acI1U0sOEcHwFJ4uQrcyw2vU6bI8');
 	
 CREATE FUNCTION create_sched_row() RETURNS trigger AS $create_sched_row$
