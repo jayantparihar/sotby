@@ -25,7 +25,7 @@ const pool = new Pool({
 const port = 8000;
 
 app.use(express.json());
-app.use(express.static(__dirname, public));
+app.use(express.static("public"));
 
 app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
