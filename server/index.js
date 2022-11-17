@@ -19,7 +19,7 @@ const pool = new Pool({
   port: process.env.PORT,
   password: process.env.PASSWORD,
   database: process.env.DATABASE,
-  // ssl: { rejectUnauthorized: false }
+  ssl: { rejectUnauthorized: false }
 });
 
 const port = process.env.SERVERPORT || 8000;
