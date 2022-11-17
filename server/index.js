@@ -22,7 +22,7 @@ const pool = new Pool({
   // ssl: { rejectUnauthorized: false }
 });
 
-const port = 8000;
+const port = process.env.SERVERPORT || 8000;
 
 app.use(express.json());
 app.use(express.static("public"));
