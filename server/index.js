@@ -37,6 +37,7 @@ app.use(function (req, res, next) {
 
 // Routes
 app.get('/users', (req, res) => {
+  console.log("in /users handler);
   instructorModel.getUsers()
     .then(response => {
       res.status(200).send(response);
