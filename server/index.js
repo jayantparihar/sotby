@@ -20,7 +20,7 @@ const pool = new Pool({
   password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
   database: 'd69760tlssr9rr',
  ssl: {
-      require: false, // This will help you. But you will see nwe error
+      require: true, // This will help you. But you will see nwe error
       rejectUnauthorized: false // This line will fix new error
     }});
 
