@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-// const { Pool } = require("pg");
+const { Pool } = require("pg");
 const socketConnect = require("./socket");
 const instructorModel = require('./requests');
 const argon2 = require("argon2");
@@ -13,14 +13,16 @@ require('dotenv').config();
 
 console.log("Script started");
 
-// const pool = new Pool({
-//   host: 'ec2-18-215-41-121.compute-1.amazonaws.com',
-//   user: 'raplhvqtreahld',
-//   port: '5432',
-//   password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
-//   database: 'd69760tlssr9rr',
-//   ssl: false
-// });
+const pool = new Pool({
+  host: 'ec2-18-215-41-121.compute-1.amazonaws.com',
+  user: 'raplhvqtreahld',
+  port: '5432',
+  password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
+  database: 'd69760tlssr9rr',
+ ssl: {
+      require: false, // This will help you. But you will see nwe error
+      rejectUnauthorized: false // This line will fix new error
+    }});
 
 const port = process.env.SERVERPORT || 8000;
 
@@ -184,4 +186,4 @@ var server = app.listen(
   )
 );
 
-socketConnect.socketStart(server, instructorModel);
+socketConnect.socketStart(server, pool, instructorModel);
