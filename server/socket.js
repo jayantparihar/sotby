@@ -1,5 +1,5 @@
 const socket = require("socket.io");
-// const { createAdapter } = require("@socket.io/postgres-adapter");
+const { createAdapter } = require("@socket.io/postgres-adapter");
 const argon2 = require("argon2");
 const EventEmitter = require('events');
 
@@ -16,7 +16,7 @@ async function lockUserDeletion(lock, bus) {
 // Socket.io code
 const socketStart = async (server, pool, instructorModel) => {
     const io = socket(server);
-//     io.adapter(createAdapter(pool));
+    io.adapter(createAdapter(pool));
     const bus = new EventEmitter();
     let lock = false;
     io.on('connection', (socket) => {
