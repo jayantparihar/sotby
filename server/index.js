@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const { Pool } = require("pg");
+// const { Pool } = require("pg");
 const socketConnect = require("./socket");
 const instructorModel = require('./requests');
 const argon2 = require("argon2");
