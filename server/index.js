@@ -13,14 +13,14 @@ require('dotenv').config();
 
 console.log("Script started");
 
-const pool = new Pool({
-  host: 'ec2-18-215-41-121.compute-1.amazonaws.com',
-  user: 'raplhvqtreahld',
-  port: '5432',
-  password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
-  database: 'd69760tlssr9rr',
-  ssl: false
-});
+// const pool = new Pool({
+//   host: 'ec2-18-215-41-121.compute-1.amazonaws.com',
+//   user: 'raplhvqtreahld',
+//   port: '5432',
+//   password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
+//   database: 'd69760tlssr9rr',
+//   ssl: false
+// });
 
 const port = process.env.SERVERPORT || 8000;
 
@@ -184,4 +184,4 @@ var server = app.listen(
   )
 );
 
-socketConnect.socketStart(server, pool, instructorModel);
+socketConnect.socketStart(server, instructorModel);
