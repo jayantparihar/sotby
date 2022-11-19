@@ -21,7 +21,7 @@ const pool = new Pool({
   port: '5432',
   password: 'a1ff5f231dd2747ac645573e92b36c6861b2cec959cc12d8f22b672b7f976742',
   database: 'd69760tlssr9rr',
-  ssl: false
+//   ssl: false
 });
 pool.connect();
 
