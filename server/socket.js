@@ -15,12 +15,10 @@ async function lockUserDeletion(lock, bus) {
 
 // Socket.io code
 const socketStart = async (server, pool, instructorModel) => {
-    console.log('in socket start')
     const io = socket(server);
 //     io.adapter(createAdapter(pool));
     const bus = new EventEmitter();
     let lock = false;
-    console.log('in socket start')
     io.on('connection', (socket) => {
         console.log('a user connected');
         socket.on('itemChanged', (item, itemInfo) => {
