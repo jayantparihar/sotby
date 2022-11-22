@@ -34,7 +34,7 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   res.setHeader('Content-Type', 'application/json');
-  res.setHeader("Content-Security-Policy", "default-src 'self'; script-src 'report-sample' 'self'; style-src 'report-sample' 'self'; object-src 'none'; base-uri 'self'; connect-src 'self'; font-src 'self'; frame-src 'self'; img-src 'self'; manifest-src 'self'; media-src 'self'; report-uri https://637d12d81587582478909d77.endpoint.csper.io/?v=0; worker-src 'none';)
+  res.setHeader("Content-Security-Policy", "default-src 'self' style-src 'self' 'unsafe-inline';")
   next();
 });
 
