@@ -180,7 +180,7 @@ app.get('/resources', (req, res) => {
 
 app.get('/', (req, res) => {res.sendStatus(200)});
 
-app.get('*', (req, res) => res.sendFile("public", 'index.html')));
+app.get('*', (req, res) => res.sendFile("public", 'index.html'));
 
 var server = app.listen(
   port,
