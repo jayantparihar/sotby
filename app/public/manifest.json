@@ -22,5 +22,5 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
-  "content_security_policy": "default-src 'self' style-src 'self' 'unsafe-inline';"
+  "content_security_policy": "default-src 'self' style-src 'self' 'unsafe-inline' 'sha256-MVqAUK7TQybNCAv8xfI6vNphGS5N9Nt2HyrNVnjgHj4=';
 }
