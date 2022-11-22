@@ -4,6 +4,7 @@ const { Pool } = require("pg");
 const socketConnect = require("./socket");
 const instructorModel = require('./requests');
 const argon2 = require("argon2");
+const cors = require('cors');
 
 /*
 package needed to read .env which is
@@ -25,7 +26,9 @@ const pool = new Pool({
     }});
 
 const port = process.env.SERVERPORT || 8000;
-
+app.use(
+    cors(),
+  );
 app.use(express.json());
 app.use(express.static("public"));
 
