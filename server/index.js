@@ -5,7 +5,7 @@ const socketConnect = require("./socket");
 const instructorModel = require("./requests");
 const argon2 = require("argon2");
 const cors = require("cors");
-// const helmet = require("helmet");
+const helmet = require("helmet");
 const path = require("path");
 /*
 package needed to read .env which is
