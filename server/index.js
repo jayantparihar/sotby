@@ -29,27 +29,27 @@ const pool = new Pool({
 
 const port = process.env.SERVERPORT || 8000;
 app.use(cors());
-// app.use(
-//   helmet.contentSecurityPolicy({
-//     directives: {
-//       //  "default-src" used as fallback for any undeclared directives
-//       "default-src": ["'self'"],
-//       // i am using stripe api. if you have any script add it here
-//       "script-src": ["'self'", "'unsafe-inline'", "js.stripe.com"],
-//       // external css link here
-//       "style-src": ["'self'", "'unsafe-inline'", "fonts.googleapis.com"],
-//       "frame-src": ["'self'", "js.stripe.com"],
-//       "font-src": [
-//         "'self'",
-//         "fonts.googleapis.com",
-//         "fonts.gstatic.com",
-//         "res.cloudinary.com/",
-//       ],
-//       "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
-//     },
-//     reportOnly: true,
-//   })
-// );
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      //  "default-src" used as fallback for any undeclared directives
+      "default-src": ["'self'"],
+      // i am using stripe api. if you have any script add it here
+      "script-src": ["'self'", "'unsafe-inline'", "js.stripe.com"],
+      // external css link here
+      "style-src": ["'self'", "'unsafe-inline'", "fonts.googleapis.com"],
+      "frame-src": ["'self'", "js.stripe.com"],
+      "font-src": [
+        "'self'",
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+        "res.cloudinary.com/",
+      ],
+      "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
+    },
+    reportOnly: true,
+  })
+);
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -63,7 +63,7 @@ app.use(function (req, res, next) {
   res.setHeader("Content-Type", "application/json");
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; script-src 'unsafe-inline'; style-src  'unsafe-inline'"
+    "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; "
   );
   next();
 });
