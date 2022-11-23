@@ -94,7 +94,7 @@ app.get("/courses", (req, res) => {
 });
 
 // Vacations
-app.get("/vacations", (req, res) => {
+app.get("/api/vacations", (req, res) => {
   instructorModel
     .getVacationsApproved(req)
     .then((response) => {
@@ -138,7 +138,7 @@ app.post("/create/user", async (req, res) => {
     });
 });
 
-app.post("/vacations", (req, res) => {
+app.post("/api/vacations", (req, res) => {
   instructorModel
     .postUser(req.body)
     .then((response) => {
@@ -152,7 +152,7 @@ app.post("/vacations", (req, res) => {
 });
 
 // Login
-app.post("/login", (req, res) => {
+app.post("/api/login", (req, res) => {
   instructorModel
     .login(req.body)
     .then(async (response) => {
@@ -206,7 +206,7 @@ app.get("/detailedSchedule", (req, res) => {
     });
 });
 
-app.get("/resources", (req, res) => {
+app.get("/api/resources", (req, res) => {
   instructorModel
     .getResources(req.query.date)
     .then((response) => {
@@ -218,7 +218,6 @@ app.get("/resources", (req, res) => {
       res.status(500).send(error);
     });
 });
-
 
 app.get("*", (req, res) =>
   res.sendFile(path.resolve(__dirname + "/public", "index.html"))
