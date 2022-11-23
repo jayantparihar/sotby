@@ -61,10 +61,11 @@ app.use(function (req, res, next) {
     "Content-Type, Access-Control-Allow-Headers"
   );
   res.setHeader("Content-Type", "application/json");
-   res.setHeader(
+  res.setHeader(
     "Content-Security-Policy",
-  "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; style-src-elem 'unsafe-inline'; script-src-elem 'unsafe-inline'; font-style 'self'" );
-  next()
+    "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'unsafe-inline' 'self'; font-style 'self'"
+  );
+  next();
 });
 
 // Routes
