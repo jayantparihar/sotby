@@ -5,7 +5,7 @@ const socketConnect = require("./socket");
 const instructorModel = require("./requests");
 const argon2 = require("argon2");
 const cors = require("cors");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const path = require("path");
 /*
 package needed to read .env which is
@@ -53,20 +53,20 @@ app.use(
 app.use(express.json());
 app.use(express.static("public"));
 
-app.use(function (req, res, next) {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type, Access-Control-Allow-Headers"
-  );
-  res.setHeader("Content-Type", "application/json");
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'unsafe-inline'; style-src  'unsafe-inline'"
-  );
-  next();
-});
+// app.use(function (req, res, next) {
+//   res.setHeader("Access-Control-Allow-Origin", "*");
+//   res.setHeader("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS");
+//   res.setHeader(
+//     "Access-Control-Allow-Headers",
+//     "Content-Type, Access-Control-Allow-Headers"
+//   );
+//   res.setHeader("Content-Type", "application/json");
+//   res.setHeader(
+//     "Content-Security-Policy",
+//     "default-src 'self'; script-src 'unsafe-inline'; style-src  'unsafe-inline'"
+//   );
+//   next();
+// });
 
 // Routes
 app.get("/users", (req, res) => {
