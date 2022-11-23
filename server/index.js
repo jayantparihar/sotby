@@ -219,9 +219,6 @@ app.get("/resources", (req, res) => {
     });
 });
 
-app.get("/", (req, res) => {
-  res.sendStatus(200);
-});
 
 app.get("*", (req, res) =>
   res.sendFile(path.resolve(__dirname + "/public", "index.html"))
