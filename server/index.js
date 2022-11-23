@@ -38,7 +38,7 @@ app.use(function (req, res, next) {
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Access-Control-Allow-Headers');
   res.setHeader('Content-Type', 'application/json');
-  res.setHeader('Content-Security-Policy': "default-src 'self'; 'script-src 'unsafe-inline'; style-src  'unsafe-inline'");
+  res.setHeader('Content-Security-Policy', "default-src 'self'; 'script-src 'unsafe-inline'; style-src  'unsafe-inline'");
   next();
 });
 
