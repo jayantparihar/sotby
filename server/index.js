@@ -63,7 +63,7 @@ app.use(function (req, res, next) {
   res.setHeader("Content-Type", "application/json");
   res.setHeader(
     "Content-Security-Policy",
-    "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'unsafe-inline' ; font-style 'self'"
+    "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; style-src-elem 'unsafe-inline' 'self'; script-src-elem 'unsafe-inline' ; font-src 'self'"
   );
   next();
 });
