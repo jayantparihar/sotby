@@ -6,6 +6,7 @@ const instructorModel = require("./requests");
 const argon2 = require("argon2");
 const cors = require("cors");
 const helmet = require("helmet");
+const path = require("path");
 /*
 package needed to read .env which is
 not on github repo to read pool info
@@ -222,7 +223,9 @@ app.get("/", (req, res) => {
   res.sendStatus(200);
 });
 
-app.get("*", (req, res) => res.sendFile("public", "index.html"));
+app.get("*", (req, res) =>
+  res.sendFile(path.resolve(__dirname + "/public", "index.html"))
+);
 
 var server = app.listen(
   port,
