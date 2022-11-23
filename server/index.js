@@ -5,7 +5,7 @@ const socketConnect = require("./socket");
 const instructorModel = require("./requests");
 const argon2 = require("argon2");
 const cors = require("cors");
-const helmet = require("helmet");
+// const helmet = require("helmet");
 const path = require("path");
 /*
 package needed to read .env which is
@@ -29,27 +29,27 @@ const pool = new Pool({
 
 const port = process.env.SERVERPORT || 8000;
 app.use(cors());
-app.use(
-  helmet.contentSecurityPolicy({
-    directives: {
-      //  "default-src" used as fallback for any undeclared directives
-      "default-src": ["'self'"],
-      // i am using stripe api. if you have any script add it here
-      "script-src": ["'self'", "'unsafe-inline'", "js.stripe.com"],
-      // external css link here
-      "style-src": ["'self'", "'unsafe-inline'", "fonts.googleapis.com"],
-      "frame-src": ["'self'", "js.stripe.com"],
-      "font-src": [
-        "'self'",
-        "fonts.googleapis.com",
-        "fonts.gstatic.com",
-        "res.cloudinary.com/",
-      ],
-      "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
-    },
-    reportOnly: true,
-  })
-);
+// app.use(
+//   helmet.contentSecurityPolicy({
+//     directives: {
+//       //  "default-src" used as fallback for any undeclared directives
+//       "default-src": ["'self'"],
+//       // i am using stripe api. if you have any script add it here
+//       "script-src": ["'self'", "'unsafe-inline'", "js.stripe.com"],
+//       // external css link here
+//       "style-src": ["'self'", "'unsafe-inline'", "fonts.googleapis.com"],
+//       "frame-src": ["'self'", "js.stripe.com"],
+//       "font-src": [
+//         "'self'",
+//         "fonts.googleapis.com",
+//         "fonts.gstatic.com",
+//         "res.cloudinary.com/",
+//       ],
+//       "img-src": ["'self'", "data:", "https://res.cloudinary.com"],
+//     },
+//     reportOnly: true,
+//   })
+// );
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -61,10 +61,10 @@ app.use(function (req, res, next) {
     "Content-Type, Access-Control-Allow-Headers"
   );
   res.setHeader("Content-Type", "application/json");
-  res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; "
-  );
+//   res.setHeader(
+//     "Content-Security-Policy",
+//     "default-src 'self'; script-src 'unsafe-inline' 'self'; style-src  'unsafe-inline' 'self'; "
+//   );
   next();
 });
 
